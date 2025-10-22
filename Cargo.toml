@@ -835,12 +835,13 @@ ui_input = { codegen-units = 1 }
 zed_actions = { codegen-units = 1 }
 
 [profile.release]
-debug = "limited"
-lto = "thin"
+opt-level = 3
+debug = "none"
+lto = "fat"
 codegen-units = 1
 
-[profile.release.package]
-zed = { codegen-units = 16 }
+# [profile.release.package]
+# zed = { codegen-units = 16 }
 
 [profile.release-fast]
 inherits = "release"
